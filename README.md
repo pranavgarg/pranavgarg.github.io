@@ -1,8 +1,8 @@
 ## Overview
-
-pranavgarg.info is currently a static web site hosted in an S3 bucket, and I am doing the version control of the website using Github.
-To automate the process of deployment of the website from github whenever there is a commit made, a SNS notification gets generated from github webhook 
-which is tied to a AWS Lambda function which then pulls the latest code and deploy it on S3. 
+pranavgarg.github.io and pranavgarg.info are currently a static web site hosted on github and an S3 bucket.
+Github is being used for doing the version control of the website.
+To automate the process of deployment of the website on s3 bucket from github, a SNS notification is hooked to github webhook.  
+This SNS invokes a AWS Lambda function which then pulls the latest code and deploy it on S3. 
 
 ## Architecture
 pranavgarg.info is a personal website using bootstrap with few open source libraries like jQuery, fontawesome. 
@@ -106,3 +106,4 @@ Make the Files loop asynchronous-safe ✅
 Validate more end-to-end cases, including accepting pull requests
 Clean up documentation a bit to see if this Rube Goldberg wiring can be made more straightforward and understandable
 Improve / Expand the secrets file framework to have a JSON-oriented structure and multiple secrets / data points
+
